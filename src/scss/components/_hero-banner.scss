@@ -1,0 +1,239 @@
+.promo-banner {
+  padding: 50px;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+
+}
+
+.badge {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+  background: var(--accent);
+  color: var(--dark-bg);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 30px;
+
+}
+
+.title {
+  color: var(--light);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--accent);
+  background: rgba(255, 225, 53, 0.25);
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.description {
+  color: var(--light);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+.feature2 {
+  display: flex;
+  gap: 10px ;
+
+}
+.features {
+
+  color: var(--light);
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.feature {
+  margin-top: 10px;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.feature:hover {
+  background: rgba(255, 225, 53, 0.25);
+  border-color: #FFE135;
+  transform: translateY(-3px);
+}
+.feature-icon {
+  font-size: 1.5em;
+}
+
+// Форма email
+.email-form {
+  gap: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.email-input {
+  min-width: 250px;
+  padding: 18px 25px;
+  border: 1px solid #8E8E8E;
+  border-radius: 50px;
+  background: none;
+  color: #8E8E8E;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.email-input:hover,
+.email-input:focus{
+  outline: none;
+  border-color: var(--accent);
+  background: #4B4B31;
+}
+
+// Счетчик
+.counter-section {
+  margin-bottom: 40px;
+}
+
+.counter-title {
+  color: var(--light);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+
+}
+
+.counter {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-number {
+  font-size: 2.5em;
+
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(255, 225, 53, 0.4);
+  padding: 15px;
+  border-radius: 15px;
+  min-width: 80px;
+}
+
+.counter-label {
+  font-size: 0.9em;
+  margin-top: 8px;
+
+}
+.hero-image {
+  width: 620px;
+
+  img {
+    width: 100%;
+    height: auto;
+    animation: rotate 60s linear infinite;
+    transform-origin: center center;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// Адаптивность
+@media (max-width: 768px) {
+  .promo-banner {
+    padding: 30px 20px;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: 2.2em;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .email-form {
+    flex-direction: column;
+  }
+
+  .email-input {
+    min-width: auto;
+  }
+
+  .counter {
+    gap: 10px;
+  }
+
+  .counter-number {
+    font-size: 2em;
+    min-width: 60px;
+    padding: 12px;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .countdown-item {
+    padding: 1rem;
+    min-width: 80px;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8em;
+  }
+
+  .counter {
+    flex-wrap: wrap;
+  }
+
+  .counter-item {
+    flex: 1;
+    min-width: 70px;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+  }
+
+  .countdown-item {
+    flex: 1;
+    min-width: 70px;
+  }
+}

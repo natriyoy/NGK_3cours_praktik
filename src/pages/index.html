@@ -9,21 +9,85 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Карточки</h1>
 
-@@include('../components/_card.html', {
-"img": "./assets/images/cat1",
-"alt": "Изображение 1",
-"title": "Заголовок 1",
-"text": "Текст описания карточки 1"
-})
 
-@@include('../components/_card.html', {
-"img": "./assets/images/cat1",
-"alt": "Изображение 2",
-"title": "Заголовок 2",
-"text": "Текст описания карточки 2"
-})
+@@include('../components/_header.html')
 
+<div class="container">
+    <!-- Hero баннер как компонент -->
+    @@include('../components/_hero-banner.html')
+
+    <!-- Остальной контент -->
+</div>
+<div class="container">
+    <!-- Hero баннер как компонент -->
+    @@include('../components/_slider.html')
+
+    <!-- Остальной контент -->
+</div>
+<section id="catalog" class="section glass">
+    <h2>Наш каталог</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Мы предлагаем широкий ассортимент свежих фруктов со всего мира. Все продукты проходят строгий контроль качества.</p>
+
+    <div class="products-grid">
+        @@include('../components/_card_product.html', {
+        "img": "./assets/images/tamarilo.webp",
+        "alt": "Сочные ананасы",
+        "overlay": "🍍 Сочный и сладкий",
+        "name": "Сочные ананасы",
+        "origin": "🇨🇷 Коста-Рика",
+        "description": "Свежие ананасы с тропических плантаций",
+        "price": "450 ₽/кг"
+        })
+
+        @@include('../components/_card_product.html', {
+        "img": "./assets/images/salak.webp",
+        "alt": "Сладкие манго",
+        "overlay": "🥭 Ароматный и спелый",
+        "name": "Сладкие манго",
+        "origin": "🇹🇭 Тайланд",
+        "description": "Медовые манго сорта Альфонсо",
+        "price": "620 ₽/кг"
+        })
+
+        @@include('../components/_card_product.html', {
+        "img": "./assets/images/karambola.webp",
+        "alt": "Свежая клубника",
+        "overlay": "🍓 Сладкая и ароматная",
+        "name": "Свежая клубника",
+        "origin": "🇷🇺 Краснодарский край",
+        "description": "Сезонная клубника первого сорта",
+        "price": "890 ₽/кг"
+        })
+
+        @@include('../components/_card_product.html', {
+        "img": "./assets/images/jec.webp",
+        "alt": "Зеленые киви",
+        "overlay": "🥝 Богат витамином C",
+        "name": "Зеленые киви",
+        "origin": "🇳🇿 Новая Зеландия",
+        "description": "Полезные киви с нежной мякотью",
+        "price": "380 ₽/кг"
+        })
+
+
+    </div>
+</section>
+<script>
+    // Загрузка темы из локального хранилища при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light-theme';
+        document.body.className = savedTheme;
+    });
+
+    // Переключение темы с сохранением
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        const currentTheme = document.body.className;
+        const newTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+
+        document.body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+    });
+</script>
 </body>
 </html>

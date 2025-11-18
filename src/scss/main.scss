@@ -10,9 +10,64 @@
 @use 'layout/container';
 
 // ==== 4. Components ====
+@use 'components/header';
+@use 'components/hero-banner';
 @use 'components/button';
-@use 'components/card';
+@use 'components/slider';
+@use 'components/card_product';
 
+:root {
+  --dark-bg: #0F0F0F;
+  --dark-gray: #202020;
+  --accent: rgb(255, 255, 126);
+  --dark-green:  #FFE135;
+
+  --light-glass:  #EDEDED;
+  --light: #F8F8F8;
+  --dark: #2A2A2A;
+}
 body {
-  background-color: var(--main-color);
+  background: var(--light);
+  color: var(--light);
+  min-height: 100vh;
+  padding: 0;
+  margin: 160px 100px 10px 100px;
+  font-family: 'Inter', 'Sh', sans-serif;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* светлая тема */
+body.light-theme {
+  background: var(--light);
+  color: #ffffff;
+
+  .glass {
+    background: var(--light-glass);
+    color: #000000;
+  }
+}
+
+/* темная тема */
+body.dark-theme {
+  background: var(--dark);
+  color: var(--light-text);
+
+  .glass {
+    background: var(--dark);
+    color: var(--light-text);
+  }
+  header {
+    color: var(--light);
+  }
+}
+
+// Стили для glass (общие)
+.glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 25px;
+  box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.3),
+          inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
