@@ -13,6 +13,7 @@
 
 @@include('../components/_header.html')
 
+
 <div class="container">
     <!-- Hero баннер как компонент -->
     @@include('../components/_hero-banner.html')
@@ -79,57 +80,42 @@
     <div>
         <div class="staff-grid">
             @@include('../components/_staf.html', {
-            "img": "./assets/images/glava.webp",
-            "alt": "Алексей Петров",
-            "name": "Алексей Петров",
-            "position": "Основатель"
-            })
 
-            @@include('../components/_staf.html', {
-            "img": "./assets/images/glava.webp",
-            "alt": "Мария Петрова",
-            "name": "Мария Петрова",
-            "position": "Менеджер по продажам"
-            })
-            @@include('../components/_staf.html', {
-            "img": "./assets/images/glava.webp",
-            "alt": "Алексей Петров",
-            "name": "Алексей Петров",
-            "position": "Основатель"
-            })
-
-            @@include('../components/_staf.html', {
-            "img": "./assets/images/glava.webp",
-            "alt": "Мария Петрова",
-            "name": "Мария Петрова",
-            "position": "Менеджер по продажам"
             })
         </div>
     </div>
 </section>
 <section id="for" class="section glass">
-    <h2 >О нас</h2>
-    <p>Мы - команда энтузиастов, которые верят, что качественные и свежие фрукты должны быть доступны каждому. Наша миссия - привозить лучшие фрукты со всего мира прямо к вашему столу.</p>
-    @@include('../components/_polosa.html', {
+    <h2 style="text-align: center" >Контакты</h2>
+    <p style="text-align: center">Свяжитесь с нами, если у вас есть вопросы или предложения. Мы всегда рады помочь!
+    </p>
 
-    })
     <div>
         @@include('../components/_form.html', {
-        "title": "Обратная связь",
-        "nameLabel": "Ваше имя",
-        "namePlaceholder": "Как к вам обращаться?",
-        "emailLabel": "Email",
-        "emailPlaceholder": "example@mail.com",
-        "phoneLabel": "Телефон",
-        "phonePlaceholder": "+7 (XXX) XXX-XX-XX",
-        "subjectLabel": "Тема сообщения",
-        "subjectPlaceholder": "О чем вы хотите рассказать?",
-        "messageLabel": "Сообщение",
-        "messagePlaceholder": "Расскажите подробнее...",
-        "buttonText": "Отправить сообщение"
+
         })
     </div>
+    <siv>
+        <div>
+            <h2 style="text-align: center" >Наши контакты</h2>
+        </div>
+        <div class="features features-1">
+                <div class="feature">
+                    <div class="feature-icon">📞</div>
+                    <span>+7 (999) 123-45-67</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <span>📍г. Москва, ул. Фруктовая, д. 15</span>
+                </div>
+            <div class="feature">
+                <div class="feature-icon">✉️</div>
+                <span>info@nobanana.ru</span>
+            </div>
+        </div>
+    </siv>
 </section>
+@@include('../components/_footer.html')
 <script>
     // Загрузка темы из локального хранилища при загрузке страницы
     document.addEventListener('DOMContentLoaded', function() {

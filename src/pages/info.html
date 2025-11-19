@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/info.css" />
+    <title>Document</title>
+</head>
+<body>
+@@include('../components/_header.html')
+@@include('../components/_info-block.html')
+<div class="container">
+    <!-- Hero баннер как компонент -->
+    @@include('../components/_slider.html')
+
+    <!-- Остальной контент -->
+</div>
+<div class="container glass">
+    <!-- Блок с ценностями -->
+    <div class="about-glass">
+        <h2 class="about-subtitle">Наши ценности</h2>
+        @@include('../components/_polosa.html')
+        <div class="values-grid">
+            @@include('../components/_primuh.html', {
+            "icon": "🌱",
+            "title": "Качество",
+            "description": "Мы тщательно отбираем каждый фрукт, сотрудничая только с проверенными поставщиками, которые разделяют наши стандарты качества."
+            })
+
+            @@include('../components/_primuh.html', {
+            "icon": "🚚",
+            "title": "Свежесть",
+            "description": "Оптимизированная логистика позволяет доставлять фрукты от сбора до вашего стола в кратчайшие сроки."
+            })
+
+            @@include('../components/_primuh.html', {
+            "icon": "🌍",
+            "title": "Устойчивость",
+            "description": "Мы заботимся об окружающей среде, используя экологичную упаковку и поддерживая ответственных производителей."
+            })
+
+            @@include('../components/_primuh.html', {
+            "icon": "🤝",
+            "title": "Партнерство",
+            "description": "Мы строим долгосрочные отношения с клиентами и поставщиками, основанные на взаимном уважении и доверии."
+            })
+        </div>
+    </div>
+
+</div>
+<div class="container glass">
+    <h2 class="about-subtitle">Наши услуги</h2>
+    @@include('../components/_polosa.html')
+    <div class="values-grid">
+        @@include('../components/_primuh.html', {
+        "icon": "🏠",
+        "title": "Доставка на дом",
+        "description": "Быстрая и удобная доставка свежих фруктов прямо к вашей двери в удобное для вас время."
+        })
+
+        @@include('../components/_primuh.html', {
+        "icon": "🏢",
+        "title": "Корпоративное обслуживание",
+        "description": "Регулярные поставки фруктов в офисы для поддержания здоровой атмосферы в коллективе."
+        })
+
+        @@include('../components/_primuh.html', {
+        "icon": "🎁",
+        "title": "Фруктовые корзины",
+        "description": "Элегантные подарочные наборы для любых мероприятий — от дней рождений до корпоративных событий."
+        })
+
+        @@include('../components/_primuh.html', {
+        "icon": "📦",
+        "title": "Фруктовые подписки",
+        "description": "Регулярные поставки сезонных фруктов по выгодной подписной модели со скидкой до 20%."
+        })
+    </div>
+</div>
+<section id="staf" class="section glass">
+    <h2 >О нас</h2>
+    <p>Мы - команда энтузиастов, которые верят, что качественные и свежие фрукты должны быть доступны каждому. Наша миссия - привозить лучшие фрукты со всего мира прямо к вашему столу.</p>
+    @@include('../components/_polosa.html', {
+
+    })
+    <div>
+        <div class="staff-grid">
+            @@include('../components/_staf.html', {
+
+            })
+        </div>
+    </div>
+</section>
+@@include('../components/_footer.html')
+<script>
+    // Загрузка темы из локального хранилища при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light-theme';
+        document.body.className = savedTheme;
+    });
+
+    // Переключение темы с сохранением
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        const currentTheme = document.body.className;
+        const newTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+
+        document.body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+    });
+</script>
+</body>
+</html>

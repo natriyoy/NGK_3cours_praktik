@@ -9,13 +9,60 @@
   padding: 40px;
 }
 
+.form-row {
+  display: flex;
+  gap: 25px;
+  align-items: stretch; /* Изменил с center на stretch */
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-column:first-child {
+  flex: 0 0 40%; /* Ширина для левой колонки */
+}
+
+.form-column:last-child {
+  flex: 1; /* Занимает оставшееся пространство */
+}
+
+/* Убедимся, что textarea занимает всю высоту */
+.form-column:last-child .form-group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column:last-child .form-textarea {
+  flex: 1; /* Занимает всю доступную высоту */
+
+}
+
+/* Высота полей ввода */
+
+
+/* Высота двух полей ввода + gap */
+.form-column:first-child {
+  gap: 25px; /* Такой же gap как в form-row */
+}
+
 .form-title {
   font-size: 2em;
   margin-bottom: 30px;
   color: var(--accent-green);
 }
-
+#for {
+  padding: 20px 300px 20px 300px;
+}
+.features-1 {
+  display: flex;
+  gap: 25px;
+}
 .contact-form {
+
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -29,7 +76,8 @@
 .form-label {
   margin-bottom: 10px;
   font-weight: 500;
-  color: var(--light-text);
+  font-size: 24px;
+  color: var(--light);
 }
 
 .form-input, .form-textarea {
@@ -54,10 +102,8 @@
 }
 
 .form-textarea {
-  min-height: 150px;
   resize: vertical;
 }
-
 
 /* Стили для светлой темы */
 body.light-theme .contact-form-container {
@@ -93,6 +139,19 @@ body.light-theme .form-textarea:focus {
     padding: 30px 20px;
   }
 
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-column:first-child {
+    flex: 1;
+  }
+
+  .form-column:last-child .form-textarea {
+    min-height: 150px;
+  }
+
   .form-title {
     font-size: 1.7em;
   }
@@ -100,7 +159,6 @@ body.light-theme .form-textarea:focus {
   .form-input, .form-textarea {
     padding: 15px 20px;
   }
-
 }
 
 @media (max-width: 480px) {
