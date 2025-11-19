@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title>Document</title>
+    <title>Document2</title>
 </head>
 <body>
 
 
+
+
+
+
+
+
+
+
+
 <header>
     <nav class="nav glass">
+        
+        <div class="log">
         <?xml version="1.0" encoding="UTF-8"?>
         <svg width="150px" id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.32 55.9">
             <defs>
@@ -63,24 +74,73 @@
                 </g>
             </g>
         </svg>
-
-        <ul class="nav-menu">
+        </div>
+        
+        <ul class="nav-menu desktop-menu">
             <li><a class="nav-menu-cl" href="index.html">Главная</a></li>
-            <li><a class="nav-menu-cl" href="#fruits">Каталог</a></li>
             <li><a class="nav-menu-cl" href="info.html">О нас</a></li>
             <li><a class="nav-menu-cl" href="contact.html">Контакты</a></li>
-            <li class="lig-dark nav-menu-cl" id="themeToggle">Тeма</li>
+            <li><a class="nav-menu-cl" href="korzina.html">Корзина</a></li>
+            <li class="lig-dark nav-menu-cl" id="themeToggle">Тема</li>
         </ul>
+
+        
+        <div class="burger-icon" id="burgerToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
+    
+    <div class="burger-modal" id="burgerModal">
+        <div class="burger-modal-content">
+            <div class="burger-close" id="burgerClose">×</div>
+            <ul class="burger-menu">
+                <li><a class="burger-menu-cl" href="index.html">Главная</a></li>
+                <li><a class="burger-menu-cl" href="info.html">О нас</a></li>
+                <li><a class="burger-menu-cl" href="contact.html">Контакты</a></li>
+                <li><a class="burger-menu-cl" href="korzina.html">Корзина</a></li>
+                <li class="lig-dark burger-menu-cl" id="themeToggleMobile">Тема</li>
+            </ul>
+        </div>
+    </div>
 </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burgerToggle = document.getElementById('burgerToggle');
+        const burgerModal = document.getElementById('burgerModal');
+        const burgerClose = document.getElementById('burgerClose');
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+        // Открытие/закрытие бургер-меню
+        burgerToggle.addEventListener('click', function() {
+            burgerModal.classList.add('active');
+            burgerToggle.classList.add('active');
+        });
+
+        burgerClose.addEventListener('click', function() {
+            burgerModal.classList.remove('active');
+            burgerToggle.classList.remove('active');
+        });
+
+        // Закрытие по клику вне меню
+        burgerModal.addEventListener('click', function(e) {
+            if (e.target === burgerModal) {
+                burgerModal.classList.remove('active');
+                burgerToggle.classList.remove('active');
+            }
+        });
+    });
+
+</script>
 
 
-<div class="container">
+<div class="container3">
     
     <section id="home" class="promo-banner glass">
   <div class="promo-banner2">
-
     <h1 class="title">Скоро открытие<br> <span class="highlight">У нас не только бананы!</span></h1>
 
     <p class="description">Первым 100 клиентам - <span class="highlight" style="white-space: nowrap;">скидка&nbsp;30%</span> на первую покупку! Оставьте email и мы сообщим вам об открытии.</p>
@@ -109,22 +169,11 @@
         <div class="email-button">
       <button type="button" class="cta-button">
   Оповестить
-</button>
-  </div>
+</button></div>
     </form>
-
-    <div class="counter-section">
-
-
-
-
-
-
-
-    </div>
   </div>
   <div class="hero-image">
-    <img src="./assets/images/hro-foto.webp" alt="hero-banner">
+    <img class="hero-image" src="./assets/images/hro-foto.webp" alt="hero-banner">
 
   </div>
 </section>

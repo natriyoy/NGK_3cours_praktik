@@ -1,2 +1,22 @@
 
 
+.staff-name {
+  text-decoration: none;
+}
+.staff-card {
+  text-decoration: none;
+}
+.staff-image2 {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+}
+.staff-image2 img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+}

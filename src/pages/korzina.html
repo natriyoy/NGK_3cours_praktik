@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+<!--    <link rel="stylesheet" href="assets/css/korzina.css" />-->
+    <title>Document</title>
+</head>
+<body>
+@@include('../components/_header.html')
+<div class="block-korzina">
+    <div class="block-korzina-text">Ваша корзина</div>
+    <div class="block-korzina-2">
+        <!-- Большая корзина с градиентом -->
+        <div class="block-korzina-2-1 glass">
+            <img class="block-korzina-2-1-img" src="./assets/images/korz.webp">
+            <div class="block-korzina-2-1-text-1">Ваша корзина пуста</div>
+            <div class="block-korzina-2-1-text-2">Добавьте товары для оформления заказа</div>
+        </div>
+
+        <!-- Маленькое окошечко с информацией -->
+        <div class="block-korzina-2-2 glass">
+            <div class="order-title">Ваш заказ</div>
+            <div class="order-item">
+                <div>Товары:</div>
+                <div>0 ₽</div>
+            </div>
+            @@include('../components/_polosa.html')
+            <div class="order-item">
+                <div>Доставка:</div>
+                <div>0 ₽</div>
+            </div>
+            @@include('../components/_polosa.html')
+            <div class="order-item total">
+                <div>Итого:</div>
+                <div>0 ₽</div>
+            </div>
+            @@include('../components/_button.html', {
+            "name": "Перейти к оплате",
+            })
+        </div>
+    </div>
+</div>
+
+@@include('../components/_footer.html')
+</body>
+</html>

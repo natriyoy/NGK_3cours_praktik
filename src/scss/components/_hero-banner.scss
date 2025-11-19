@@ -1,32 +1,11 @@
 .promo-banner {
-  padding: 50px;
-  margin: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 100px;
-
+  gap: 80px;
 }
-.email-button {
-  max-width: 200px;
-  display: flex;
 
-}
-.badge {
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  text-align: center;
-  background: var(--accent);
-  color: var(--dark-bg);
-  padding: 12px 30px;
-  border-radius: 25px;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 30px;
-
-}
 
 .title {
   color: var(--light);
@@ -34,67 +13,77 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+  body.light-theme & {
+    color: var(--dark);
+  }
 }
-
+.description {
+   color: var(--light);
+   font-size: 1.2rem;
+   line-height: 1.6;
+   margin-bottom: 40px;
+   max-width: 600px;
+  font-weight: bold;
+  body.light-theme & {
+    color: var(--dark);
+  }
+ }
 .highlight {
   color: var(--accent);
   background: rgba(255, 225, 53, 0.25);
   padding: 5px 15px;
   border-radius: 15px;
-}
-
-.description {
-  color: var(--light);
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 40px;
-  max-width: 600px;
-}
-.feature2 {
-  display: flex;
-  gap: 10px ;
-
+  white-space: nowrap;
+  body.light-theme & {
+    color: var(--accent);
+    background: rgba(37, 37, 37, 0.25);
+  }
 }
 .features {
-
   color: var(--light);
   margin-bottom: 40px;
   justify-content: center;
 }
-
+.feature2 {
+  display: flex;
+  gap: 10px;
+}
 .feature {
   margin-top: 10px;
   flex: 1;
-  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
+  font-weight: bold;
   background: rgba(255, 255, 255, 0.05);
   padding: 15px 25px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   box-sizing: border-box;
-}
-.feature:hover {
-  background: rgba(255, 225, 53, 0.25);
-  border-color: #FFE135;
-  transform: translateY(-3px);
+  body.light-theme & {
+    color: var(--dark);
+    background: #D9D9D9;
+  }
+  &:hover {
+    background: rgba(255, 225, 53, 0.25);
+    border-color: #FFE135;
+    transform: translateY(-3px);
+  }
 }
 .feature-icon {
   font-size: 1.5em;
 }
-
-// Форма email
 .email-form {
   gap: 15px;
+  display: flex;
   margin-bottom: 40px;
   width: 100%;
   justify-content: center;
 }
-
 .email-input {
+  width: 100%;
   min-width: 250px;
   padding: 18px 25px;
   border: 1px solid #8E8E8E;
@@ -103,58 +92,33 @@
   color: #8E8E8E;
   font-size: 1rem;
   transition: all 0.3s ease;
-}
-
-.email-input:hover,
-.email-input:focus{
-  outline: none;
-  border-color: var(--accent);
-  background: #4B4B31;
-}
-
-// Счетчик
-.counter-section {
-  margin-bottom: 40px;
-}
-
-.counter-title {
-  color: var(--light);
-  font-size: 1.1rem;
-  margin-bottom: 20px;
 
 }
+.email-button {
+   max-width: 200px;
+   display: flex;
 
-.counter {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
+ }
+.email-input {
+  &:hover,
+  &:focus {
+    color: var(--accent);
+    outline: none;
+    border-color: var(--accent);
+    background: #4B4B31;
+  }
 
-.counter-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.counter-number {
-  font-size: 2.5em;
-
-  font-weight: 700;
-  color: var(--accent);
-  background: rgba(255, 225, 53, 0.4);
-  padding: 15px;
-  border-radius: 15px;
-  min-width: 80px;
-}
-
-.counter-label {
-  font-size: 0.9em;
-  margin-top: 8px;
-
+  // Отдельно для темы
+  body.light-theme & {
+    &:hover,
+    &:focus {
+      color: var(--accent);
+      background: rgba(142, 142, 142, 0.25);
+    }
+  }
 }
 .hero-image {
   width: 620px;
-
   img {
     width: 100%;
     height: auto;
@@ -170,74 +134,73 @@
     transform: rotate(360deg);
   }
 }
-// Адаптивность
-@media (max-width: 768px) {
+
+/*768–1279px*/
+@media (max-width: 1279px) {
   .promo-banner {
-    padding: 30px 20px;
-    margin: 20px 0;
-  }
-
-  .title {
-    font-size: 2.2em;
-  }
-
-  .features {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .email-form {
-    flex-direction: column;
-  }
-
-  .email-input {
-    min-width: auto;
-  }
-
-  .counter {
     gap: 10px;
+    padding: 40px 20px;
+    flex-wrap: wrap-reverse;
+    .hero-image {
+      max-width: 50%;
+    }
   }
-
-  .counter-number {
-    font-size: 2em;
-    min-width: 60px;
-    padding: 12px;
-  }
-
-  .countdown {
-    gap: 1rem;
-  }
-
-  .countdown-item {
-    padding: 1rem;
-    min-width: 80px;
-  }
-
-  .countdown-number {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
   .title {
-    font-size: 1.8em;
+    font-size: 2.4rem;
   }
-
-  .counter {
-    flex-wrap: wrap;
+  .description {
+    font-size: 1.1rem;
+    max-width: 500px;
   }
-
-  .counter-item {
-    flex: 1;
-    min-width: 70px;
+  .feature {
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
-
-  .countdown {
-    flex-wrap: wrap;
+  .email-input {
+    padding: 16px 20px;
   }
-
-  .countdown-item {
-    flex: 1;
-    min-width: 70px;
+  .hero-image {
+    width: 450px;
   }
 }
+
+/*767px*/
+@media (max-width: 767px) {
+  .promo-banner {
+    flex-wrap: wrap-reverse;
+    gap: 5px;
+
+  }
+  .hero-image {
+    max-width: 30%;
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
+  .feature2 {
+    gap: 5px;
+  }
+  .feature {
+    padding: 12px 15px;
+    margin-top: 5px;
+  }
+  .email-form {
+    align-items: center;
+  }
+  .email-input {
+    width: 100%;
+    padding: 14px 18px;
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
