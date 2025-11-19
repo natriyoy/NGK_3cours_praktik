@@ -1,0 +1,63 @@
+/* Стили для карточек сотрудников */
+.staff-card {
+  background: rgba(105, 105, 105, 0.25);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.staff-card:hover {
+
+  border-color: rgba(255, 225, 53, 0.3);
+  .staff-image {
+    border: 3px solid var(--accent);
+  }
+}
+.staff-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+.staff-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 3px solid gray;
+}
+
+.staff-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  ;
+}
+
+.staff-name {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.staff-position {
+  font-size: 14px;
+  color: var(--light);
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Для светлой темы */
+body.light-theme .staff-card {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .staff-name {
+  color: #333;
+}

@@ -1,12 +1,32 @@
-<!-- components/_product-card.html -->
 <div class="product-card">
-    <div class="product-image">
-        <img src="@@img" alt="@@alt">
-        <div class="product-overlay">@@overlay</div>
+    <div  class="product-image">
+        <img  src="@@img" alt="@@alt">
     </div>
     <div class="product-name">@@name</div>
-    <div class="product-origin">@@origin</div>
     <div class="product-description">@@description</div>
-    <div class="product-price">@@price</div>
-    <button class="add-to-cart">В корзину</button>
+    @@include('../components/_polosa.html', {
+
+    })
+    <div class="product-specs">
+        <div class="dotted-line">
+            <span class="label">Страна</span>
+            <span class="dots"></span>
+            <span class="value">@@country</span>
+        </div>
+        <div class="dotted-line">
+            <span class="label">Цена</span>
+            <span class="dots"></span>
+            <span class="value">@@price</span>
+        </div>
+        <div class="dotted-line">
+            <span class="label">Средний вес плода</span>
+            <span class="dots"></span>
+            <span class="value">@@weight</span>
+        </div>
+    </div>
+    <div class="product-buttons">
+        @@include('../components/_button.html', {
+        "name": "В КОРЗИНУ",
+        })
+</div>
 </div>

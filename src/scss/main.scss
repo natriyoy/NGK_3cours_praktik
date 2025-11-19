@@ -15,6 +15,9 @@
 @use 'components/button';
 @use 'components/slider';
 @use 'components/card_product';
+@use 'components/polosa';
+@use 'components/staf';
+@use 'components/form';
 
 :root {
   --dark-bg: #0F0F0F;
@@ -36,7 +39,20 @@ body {
   line-height: 1.6;
   transition: all 0.3s ease;
 }
+.section {
+  margin-top: 40px;
+  padding: 10px 40px 10px 40px;
+  p {
+    color: var(--light);
+    font-size: 24px;
+  }
+}
 
+.section h2 {
+  font-size: 48px;
+  line-height: 1px;
+  color: var(--accent);
+}
 /* светлая тема */
 body.light-theme {
   background: var(--light);

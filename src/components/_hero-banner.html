@@ -1,7 +1,7 @@
 <section id="home" class="promo-banner glass">
   <div class="promo-banner2">
-    <div class="badge">Добро пожаловать!</div>
-    <h1 class="title">Скоро открытие<br> <span class="highlight">Не только бананы</span></h1>
+<!--    <div class="badge">Добро пожаловать!</div>-->
+    <h1 class="title">Скоро открытие<br> <span class="highlight">У нас не только бананы!</span></h1>
 
     <p class="description">Первым 100 клиентам - <span class="highlight" style="white-space: nowrap;">скидка&nbsp;30%</span> на первую покупку! Оставьте email и мы сообщим вам об открытии.</p>
 
@@ -26,17 +26,21 @@
 
     <form class="email-form">
       <input type="email" class="email-input" placeholder="Ваш email" required>
-      @@include('../components/_button.html')
+        <div class="email-button">
+      @@include('../components/_button.html', {
+            "name": "Оповестить",
+            })
+  </div>
     </form>
 
     <div class="counter-section">
-      <div class="counter-title">Уже присоединились:</div>
-      <div class="counter">
-        <div class="counter-item">
-          <div class="counter-number">87</div>
+<!--      <div class="counter-title">Уже присоединились:</div>-->
+<!--      <div class="counter">-->
+<!--        <div class="counter-item">-->
+<!--          <div class="counter-number">87</div>-->
 
-        </div>
-      </div>
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
   <div class="hero-image">

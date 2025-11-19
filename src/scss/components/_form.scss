@@ -1,0 +1,119 @@
+/* Стили для формы обратной связи */
+.contact-form-container {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 25px;
+  box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.3),
+          inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  padding: 40px;
+}
+
+.form-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: var(--accent-green);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--light-text);
+}
+
+.form-input, .form-textarea {
+  padding: 18px 25px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--light-text);
+  font-size: 1em;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-green);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+
+/* Стили для светлой темы */
+body.light-theme .contact-form-container {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000000;
+}
+
+body.light-theme .form-label {
+  color: #000000;
+}
+
+body.light-theme .form-input,
+body.light-theme .form-textarea {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+body.light-theme .form-input::placeholder,
+body.light-theme .form-textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+body.light-theme .form-input:focus,
+body.light-theme .form-textarea:focus {
+  border-color: var(--accent-green);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
+  .form-title {
+    font-size: 1.7em;
+  }
+
+  .form-input, .form-textarea {
+    padding: 15px 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 25px 15px;
+  }
+
+  .form-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+}
