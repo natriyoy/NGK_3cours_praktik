@@ -15,13 +15,13 @@
 .mission-vision {
   display: flex;
   gap: 10px;
-
+flex-wrap: wrap;
   margin-top: 30px;
 }
 
 .mission, .vision {
   flex: 1;
-
+min-width: 250px;
   padding: 25px;
   border-radius: 15px;
   background: rgba(255, 225, 53, 0.1);

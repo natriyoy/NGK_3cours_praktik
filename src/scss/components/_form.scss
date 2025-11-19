@@ -3,16 +3,14 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 25px;
-  box-shadow:
-          0 8px 32px rgba(0, 0, 0, 0.3),
-          inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
   padding: 40px;
 }
 
 .form-row {
   display: flex;
   gap: 25px;
-  align-items: stretch; /* Изменил с center на stretch */
+  align-items: stretch;
 }
 
 .form-column {
@@ -22,14 +20,13 @@
 }
 
 .form-column:first-child {
-  flex: 0 0 40%; /* Ширина для левой колонки */
+  flex: 0 0 40%;
 }
 
 .form-column:last-child {
-  flex: 1; /* Занимает оставшееся пространство */
+  flex: 1;
 }
 
-/* Убедимся, что textarea занимает всю высоту */
 .form-column:last-child .form-group {
   height: 100%;
   display: flex;
@@ -37,16 +34,11 @@
 }
 
 .form-column:last-child .form-textarea {
-  flex: 1; /* Занимает всю доступную высоту */
-
+  flex: 1;
 }
 
-/* Высота полей ввода */
-
-
-/* Высота двух полей ввода + gap */
 .form-column:first-child {
-  gap: 25px; /* Такой же gap как в form-row */
+  gap: 25px;
 }
 
 .form-title {
@@ -54,15 +46,17 @@
   margin-bottom: 30px;
   color: var(--accent-green);
 }
+
 #for {
   padding: 20px 300px 20px 300px;
 }
+
 .features-1 {
   display: flex;
   gap: 25px;
 }
-.contact-form {
 
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -71,13 +65,16 @@
 .form-group {
   display: flex;
   flex-direction: column;
+  label {
+    color: var(--light);
+  }
 }
 
 .form-label {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 24px;
-  color: var(--light);
+
 }
 
 .form-input, .form-textarea {
@@ -111,9 +108,7 @@ body.light-theme .contact-form-container {
   color: #000000;
 }
 
-body.light-theme .form-label {
-  color: #000000;
-}
+
 
 body.light-theme .form-input,
 body.light-theme .form-textarea {
@@ -133,10 +128,27 @@ body.light-theme .form-textarea:focus {
   background: rgba(0, 0, 0, 0.08);
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
+/* Tablet: 768–1279px */
+@media (max-width: 1500px) {
+  #for {
+    padding: 20px 150px 20px 150px;
+  }
+
   .contact-form-container {
-    padding: 30px 20px;
+    padding: 35px 30px;
+  }
+
+}
+
+/* Mobile: ≤767px */
+@media (max-width: 767px) {
+  #for {
+    padding: 20px 15px;
+  }
+
+  .contact-form-container {
+    padding: 25px 20px;
+    border-radius: 20px;
   }
 
   .form-row {
@@ -154,24 +166,30 @@ body.light-theme .form-textarea:focus {
 
   .form-title {
     font-size: 1.7em;
+    margin-bottom: 25px;
   }
 
   .form-input, .form-textarea {
     padding: 15px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-form-container {
-    padding: 25px 15px;
+    font-size: 16px; /* Убираем zoom на iOS */
   }
 
-  .form-title {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+  .form-label {
+    font-size: 20px;
+    color: var(--light);
   }
 
   .contact-form {
     gap: 20px;
   }
+
+
+
+
+  /* Центрируем кнопку */
+  .contact-form > div {
+    display: flex;
+    justify-content: center;
+  }
 }
+

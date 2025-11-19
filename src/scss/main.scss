@@ -58,8 +58,10 @@ body {
 .section h2 {
   font-size: 48px;
   line-height: 1px;
-
   color: var(--accent);
+  @media (max-width: 1279px){
+    font-size: 2rem;
+  }
 }
 /* светлая тема */
 body.light-theme {
@@ -101,7 +103,11 @@ body.dark-theme {
  display: flex;
   gap: 30px;
 
+  width: 100%;
   margin: 0 auto;
+  @media (max-width: 1279px){
+    flex-wrap: wrap;
+  }
 }
 
 /* Большая корзина с градиентом */
@@ -134,7 +140,9 @@ body.dark-theme {
 
 /* Маленькое окошечко с информацией */
 .block-korzina-2-2 {
-  min-width: 300px;
+  min-width: 250px;
+  max-width: 300px;
+  width: 100%;
 
 }
 
@@ -216,9 +224,9 @@ body.dark-theme {
 // Медиа-запросы внутри body
 
 
-@media (max-width: 767px){
+@media (max-width: 1279px){
 body {
   margin: 20px 20px 10px 20px;
-  background-color: red;
+
 }
 }

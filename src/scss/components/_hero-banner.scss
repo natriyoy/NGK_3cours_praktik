@@ -55,6 +55,9 @@
 .feature2 {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+
 }
 .feature {
   margin-top: 10px;
@@ -63,6 +66,7 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+
   font-weight: bold;
   background: rgba(255, 255, 255, 0.05);
   padding: 15px 25px;
@@ -201,6 +205,8 @@
     width: 100%;
   }
   .feature2 {
+    display: flex;
+
     gap: 5px;
   }
   .feature {
