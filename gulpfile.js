@@ -104,6 +104,16 @@ export const serve = () => {
   gulp.watch(paths.images.src, imagesToMobileWebp);
 };
 
-// Сборка
-export const build = gulp.series(clean, gulp.parallel(styles, html, assets, imagesToWebp, imagesToMobileWebp));
-export default gulp.series(build, serve);
+// ★★★ ДОБАВЬ ЭТО В КОНЕЦ ФАЙЛА ★★★
+
+// Задача для копирования обычных изображений
+export const images = () =>
+    gulp.src('src/assets/images/**/*')
+        .pipe(gulp.dest('dist/assets/images'));
+
+// Основные задачи
+export const build = gulp.series(clean, gulp.parallel(styles, html, assets, imagesToWebp, imagesToMobileWebp, images));
+export const dev = gulp.series(build, serve);
+
+// Задача по умолчанию
+export default dev;

@@ -4,12 +4,21 @@
 .products-grid {
   display: flex;
   gap: 30px;
+
+  @media (max-width: 1374px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 
 .product-card {
   background: rgba(105, 105, 105, 0.25);
   border-radius: 20px;
   padding: 40px;
+  max-width: 500px;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }

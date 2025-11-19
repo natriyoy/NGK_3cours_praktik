@@ -5,7 +5,15 @@
   text-align: center;
   gap: 80px;
 }
+.promo-banner2 {
+  max-width: 100%;
 
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
 
 .title {
   color: var(--light);
@@ -169,7 +177,11 @@
   .promo-banner {
     flex-wrap: wrap-reverse;
     gap: 5px;
-
+    padding: 20px 15px;
+  }
+  .promo-banner2 {
+    width: 100%;
+    padding: 0 10px;
   }
   .hero-image {
     max-width: 30%;
@@ -177,26 +189,42 @@
   .title {
     font-size: 1.8rem;
     margin-bottom: 15px;
-  }
 
+  }
+  .highlight {
+    font-size: 1.4rem;
+  }
   .description {
     font-size: 1rem;
     margin-bottom: 30px;
     max-width: 500px;
+    width: 100%;
   }
   .feature2 {
     gap: 5px;
   }
   .feature {
-    padding: 12px 15px;
+    font-size: 0.7rem;
+    padding: 2px 2px;
     margin-top: 5px;
   }
   .email-form {
-    align-items: center;
+    display: grid;
+    gap: 12px;
+    max-width: 100%;
+    padding: 0 10px; // Добавляем отступы по бокам
+    box-sizing: border-box;
+    margin: 0 auto; // Центрируем кнопку
   }
   .email-input {
     width: 100%;
-    padding: 14px 18px;
+
+    box-sizing: border-box;
+
+  }
+  .email-button {
+    max-width: 100%;
+    width: 100%;
   }
   .hero-image {
     width: 100%;
