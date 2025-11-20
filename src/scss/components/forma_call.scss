@@ -294,23 +294,3 @@ body.light-theme .feature3 {
   }
 }
 
-/* Адаптивность для мобильных */
-@media (max-width: 480px) {
-  .features1 {
-    gap: 20px;
-    margin-bottom: 30px;
-    flex-wrap: nowrap;
-  }
-
-  .feature3 {
-    padding: 12px 20px;
-    border-radius: 16px;
-    gap: 8px;
-    margin-top: 5px;
-    justify-content: flex-start;
-  }
-
-  .feature-icon3 {
-    font-size: 1.3em;
-  }
-}

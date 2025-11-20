@@ -30,9 +30,8 @@
 :root {
   --dark-bg: #0F0F0F;
   --dark-gray: #202020;
-  --accent: rgb(255, 255, 126);
+  --accent:  #e8c841;
   --dark-green: rgba(255, 225, 53, 0.4);
-
   --light-glass:  #EDEDED;
   --light: #F8F8F8;
   --dark: #2A2A2A;
@@ -46,6 +45,15 @@ body {
   line-height: 1.6;
   transition: all 0.3s ease;
 
+}
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 .section {
   margin-top: 40px;
@@ -69,8 +77,10 @@ body.light-theme {
   background: var(--light);
   color: var(--dark);
   .glass {
-    background: var(--light-glass);
+
+    background: var(--light);
     color: #000000;
+    box-shadow: 0 8px 20px rgba(142, 130, 130, 0.3);
   }
 }
 

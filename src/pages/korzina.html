@@ -47,5 +47,21 @@
 </div>
 
 @@include('../components/_footer.html')
+<script>
+    // Загрузка темы из локального хранилища при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light-theme';
+        document.body.className = savedTheme;
+    });
+
+    // Переключение темы с сохранением
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        const currentTheme = document.body.className;
+        const newTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+
+        document.body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+    });
+</script>
 </body>
 </html>

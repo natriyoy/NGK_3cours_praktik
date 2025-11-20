@@ -5,10 +5,16 @@
   text-align: center;
   gap: 80px;
   font-family: Arial;
+
+  // Светлая тема
+  body.light-theme & {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333333;
+  }
 }
+
 .promo-banner2 {
   max-width: 100%;
-
 
   @media (max-width: 767px) {
     padding: 0 15px;
@@ -22,44 +28,59 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+
   body.light-theme & {
-    color: var(--dark);
+    color: #222222;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
 }
+
 .description {
-   color: var(--light);
-   font-size: 1.2rem;
-   line-height: 1.6;
-   margin-bottom: 40px;
-   max-width: 600px;
+  color: var(--light);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
   font-weight: bold;
+
   body.light-theme & {
-    color: var(--dark);
+    color: #444444;
+    font-weight: 600;
   }
- }
+}
+
 .highlight {
   color: var(--accent);
   background: rgba(255, 225, 53, 0.25);
   padding: 5px 15px;
   border-radius: 15px;
   white-space: nowrap;
+
   body.light-theme & {
-    color: var(--accent);
-    background: rgba(37, 37, 37, 0.25);
+    color: #d4af37; // Более темный золотой для лучшей читаемости
+    background: rgba(212, 175, 55, 0.15);
+    font-weight: 700;
+
   }
 }
+
 .features {
   color: var(--light);
   margin-bottom: 40px;
   justify-content: center;
+
+  body.light-theme & {
+    color: #333333;
+  }
 }
+
 .feature2 {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   width: 100%;
-
 }
+
 .feature {
   margin-top: 10px;
   flex: 1;
@@ -67,7 +88,6 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-
   font-weight: bold;
   background: rgba(255, 255, 255, 0.05);
   padding: 15px 25px;
@@ -75,19 +95,32 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   box-sizing: border-box;
+
   body.light-theme & {
-    color: var(--dark);
-    background: #D9D9D9;
+    color: #222222;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: #d4af37;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
   }
+
   &:hover {
     background: rgba(255, 225, 53, 0.25);
     border-color: #FFE135;
     transform: translateY(-3px);
   }
 }
+
 .feature-icon {
   font-size: 1.5em;
 }
+
 .email-form {
   gap: 15px;
   display: flex;
@@ -95,6 +128,7 @@
   width: 100%;
   justify-content: center;
 }
+
 .email-input {
   width: 100%;
   min-width: 250px;
@@ -106,13 +140,25 @@
   font-size: 1rem;
   transition: all 0.3s ease;
 
-}
-.email-button {
-   max-width: 200px;
-   display: flex;
+  body.light-theme & {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #cccccc;
+    color: #333333;
 
- }
-.email-input {
+    &::placeholder {
+      color: #666666;
+    }
+
+    &:hover,
+    &:focus {
+      color: #d4af37;
+      outline: none;
+      border-color: #d4af37;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+  }
+
   &:hover,
   &:focus {
     color: var(--accent);
@@ -120,25 +166,28 @@
     border-color: var(--accent);
     background: #4B4B31;
   }
-
-  // Отдельно для темы
-  body.light-theme & {
-    &:hover,
-    &:focus {
-      color: var(--accent);
-      background: rgba(142, 142, 142, 0.25);
-    }
-  }
 }
+
+.email-button {
+  max-width: 200px;
+  display: flex;
+}
+
 .hero-image {
   width: 620px;
+
   img {
     width: 100%;
     height: auto;
     animation: rotate 60s linear infinite;
     transform-origin: center center;
+
+    body.light-theme & {
+      filter: brightness(1.05) contrast(1.1);
+    }
   }
 }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -154,24 +203,34 @@
     gap: 10px;
     padding: 40px 20px;
     flex-wrap: wrap-reverse;
+
     .hero-image {
       max-width: 50%;
     }
+
+    body.light-theme & {
+      background: rgba(255, 255, 255, 0.98);
+    }
   }
+
   .title {
     font-size: 2.4rem;
   }
+
   .description {
     font-size: 1.1rem;
     max-width: 500px;
   }
+
   .feature {
     padding: 12px 20px;
     font-size: 0.9rem;
   }
+
   .email-input {
     padding: 16px 20px;
   }
+
   .hero-image {
     width: 450px;
   }
@@ -183,59 +242,77 @@
     flex-wrap: wrap-reverse;
     gap: 5px;
     padding: 20px 15px;
+
+    body.light-theme & {
+      background: #ffffff;
+    }
   }
+
   .promo-banner2 {
     width: 100%;
     padding: 0 10px;
   }
+
   .hero-image {
     max-width: 30%;
   }
+
   .title {
     font-size: 1.8rem;
     margin-bottom: 15px;
-
   }
+
   .highlight {
     font-size: 1.4rem;
   }
+
   .description {
     font-size: 1rem;
     margin-bottom: 30px;
     max-width: 500px;
     width: 100%;
   }
+
   .feature2 {
     display: flex;
-
     gap: 5px;
   }
+
   .feature {
-    font-size: 0.7rem;
-    padding: 2px 2px;
+    font-size: 0.8rem;
+    padding: 5px 5px;
     margin-top: 5px;
+
+    body.light-theme & {
+      background: #f8f8f8;
+    }
   }
+
   .email-form {
     display: grid;
     gap: 12px;
     max-width: 100%;
-    padding: 0 10px; // Добавляем отступы по бокам
+    padding: 0 10px;
     box-sizing: border-box;
-    margin: 0 auto; // Центрируем кнопку
+    margin: 0 auto;
   }
+
   .email-input {
     width: 100%;
-
     box-sizing: border-box;
 
+    body.light-theme & {
+      background: #ffffff;
+    }
   }
+
   .email-button {
     max-width: 100%;
     width: 100%;
   }
+
   .hero-image {
     width: 100%;
     max-width: 300px;
   }
 }
-
