@@ -1,4 +1,5 @@
 header {
+
   z-index: 1000;
 
   .nav {
@@ -22,6 +23,13 @@ header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      @media (max-width: 767px) {
+
+          display: none;
+        }
+      @media (max-width: 767px) {
+          display: none;
+        }
       .nav-menu-cl {
         padding: 10px 20px;
         text-decoration: none;
@@ -45,7 +53,11 @@ header {
       cursor: pointer;
       position: relative;
       z-index: 1001;
+      @media (max-width: 767px) {
 
+          display: flex;
+
+      }
       span {
         height: 3px;
         width: 100%;
@@ -118,23 +130,23 @@ header {
   }
 }
 
-// 768–1279px
-@media (max-width: 1279px) {
-      .nav-menu-cl {
-        padding: 10px 20px;
-        font-size: 0.9em;
-      }
-    }
-
-
-// ≤767px
-@media (max-width: 767px) {
-
-      .nav-menu.desktop-menu {
-        display: none;
-      }
-      // Показываем бургер
-      .burger-icon {
-        display: flex;
-      }
-    }
+//// 768–1279px
+//@media (max-width: 1279px) {
+//      .nav-menu-cl {
+//        padding: 10px 20px;
+//        font-size: 0.9em;
+//      }
+//    }
+//
+//
+//// ≤767px
+//@media (max-width: 767px) {
+//
+//      .nav-menu.desktop-menu {
+//        display: none;
+//      }
+//      // Показываем бургер
+//      .burger-icon {
+//        display: flex;
+//      }
+//    }

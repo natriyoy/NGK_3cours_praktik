@@ -38,6 +38,7 @@
   --dark: #2A2A2A;
 }
 body {
+  font-family: Arial;
   background: var(--dark);
   color: var(--light);
   padding: 0;
@@ -222,7 +223,9 @@ body.dark-theme {
 //
 //}
 // Медиа-запросы внутри body
-
+.products-grid2 {
+  display: flex;
+}
 
 @media (max-width: 1279px){
 body {

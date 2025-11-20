@@ -9,14 +9,6 @@
     <title>Document2</title>
 </head>
 <body >
-<!--<style>-->
-<!--    @media (max-width: 767px){-->
-<!--        body {-->
-<!--            margin: 20px 20px 10px 20px;-->
-<!--            background-color: red;-->
-<!--        }-->
-<!--    }-->
-<!--</style>-->
 
 @@include('../components/_header.html')
 
@@ -36,6 +28,7 @@
 <section id="catalog" class="section glass">
     <h2 >Наш каталог</h2><br>
     <div class="products-grid">
+
         @@include('../components/_card_product.html', {
         "img": "./assets/images/tamarilo.webp",
         "alt": "Салак",
@@ -55,6 +48,8 @@
         "price": "690 ₽",
         "weight": "10-15 гр",
         })
+
+
         @@include('../components/_card_product.html', {
         "img": "./assets/images/tamarilo.webp",
         "alt": "Салак",
@@ -106,17 +101,17 @@
         <div>
             <h2 style="text-align: center" >Наши контакты</h2>
         </div>
-        <div class="features features-1">
-                <div class="feature">
-                    <div class="feature-icon">📞</div>
+        <div class="features1 features-1">
+                <div class="feature3">
+                    <div class="feature-ico3n">📞</div>
                     <span>+7 (999) 123-45-67</span>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">📍</div>
+                <div class="feature3">
+                    <div class="feature-icon3">📍</div>
                     <span>📍г. Москва, ул. Фруктовая, д. 15</span>
                 </div>
-            <div class="feature">
-                <div class="feature-icon">✉️</div>
+            <div class="feature3">
+                <div class="feature-icon3">✉️</div>
                 <span>info@nobanana.ru</span>
             </div>
         </div>
