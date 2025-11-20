@@ -1,5 +1,7 @@
 header {
-
+  body.light-theme & {
+    color: var(--dark);
+  }
   z-index: 1000;
 
   .nav {
@@ -9,6 +11,7 @@ header {
     padding: 20px 40px;
     justify-content: space-between;
     align-items: center;
+
       .logo-icon {
         font-size: 1.3em;
       }
@@ -23,11 +26,8 @@ header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      @media (max-width: 767px) {
 
-          display: none;
-        }
-      @media (max-width: 767px) {
+      @media (max-width: 810px) {
           display: none;
         }
       .nav-menu-cl {
@@ -38,6 +38,9 @@ header {
         border-radius: 25px;
         transition: all 0.3s ease;
         cursor: pointer;
+        body.light-theme & {
+          color: #333333;
+        }
         &:hover {
           background: var(--dark-green);
           color: var(--accent);
@@ -53,10 +56,8 @@ header {
       cursor: pointer;
       position: relative;
       z-index: 1001;
-      @media (max-width: 767px) {
-
+      @media (max-width: 810px) {
           display: flex;
-
       }
       span {
         height: 3px;

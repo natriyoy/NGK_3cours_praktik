@@ -240,9 +240,10 @@ body.light-theme .contact-text p {
   margin-bottom: 40px;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+
   gap: 30px;
-  flex-wrap: wrap;
+
+
 }
 
 .feature3 {
@@ -253,17 +254,21 @@ body.light-theme .contact-text p {
   align-items: center;
   gap: 12px;
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.05);
+  background: none;
   padding: 15px 25px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   box-sizing: border-box;
+  body.light-theme & {
+
+  }
 }
 
 body.light-theme .feature3 {
+
   color: var(--dark);
-  background: #D9D9D9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .feature3:hover {
@@ -275,10 +280,19 @@ body.light-theme .feature3 {
 .feature-icon3 {
   font-size: 1.5em;
 }
+@media (max-width: 1279px) {
+  .features1 {
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 35px;
+  }
+
+}
 
 /* Адаптивность для планшетов */
 @media (max-width: 768px) {
   .features1 {
+    flex-wrap: wrap;
     gap: 25px;
     margin-bottom: 35px;
   }
@@ -293,4 +307,3 @@ body.light-theme .feature3 {
     font-size: 1.4em;
   }
 }
-

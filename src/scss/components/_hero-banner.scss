@@ -68,7 +68,7 @@
   color: var(--light);
   margin-bottom: 40px;
   justify-content: center;
-
+flex-wrap: wrap;
   body.light-theme & {
     color: #333333;
   }
@@ -77,7 +77,7 @@
 .feature2 {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+
   width: 100%;
 }
 

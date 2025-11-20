@@ -3,7 +3,7 @@
   display: flex;
   gap: 30px;
 
-  @media (max-width: 1374px) {
+  @media (max-width: 1450px) {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -19,11 +19,15 @@
   max-width: 500px;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .product-card:hover {
   transform: translateY(-10px);
   border-color: rgba(255, 225, 53, 0.3);
+  body.light-theme & {
+    box-shadow: 0 8px 32px rgba(232, 200, 65, 0.3);
+  }
 }
 
 .product-image img {
@@ -44,6 +48,9 @@
   opacity: 0.9;
   min-height: 40px;
   color: var(--light);
+  body.light-theme & {
+    color: var(--dark);
+  }
 }
 
 .polosa {
@@ -85,12 +92,16 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
+  margin-top: auto;
 }
 
 .product-specs {
   color: var(--light);
   font-size: 14px;
   margin: 20px 0px 20px 0px;
+  body.light-theme & {
+    color: var(--dark);
+  }
 }
 
 /* Для светлой темы */
