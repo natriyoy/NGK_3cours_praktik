@@ -72,6 +72,9 @@ body {
   body.light-theme & {
     color: var(--dark);
   }
+  body.dark-theme-theme & {
+    color: var(--light);
+  }
 }
 .section h2 {
   font-size: 48px;
