@@ -286,3 +286,13 @@ body {
 }
 }
 
+.staf {
+  p{
+    body.light-theme & {
+      color: var(--dark);
+    }
+    body.dark-theme & {
+      color: var(--light);
+    }
+  }
+}

@@ -81,12 +81,22 @@
         })
     </div>
 </div>
-<section id="staf" class="section glass">
+<section  class="section glass">
     <h2 >О нас</h2>
-    <p>Мы - команда энтузиастов, которые верят, что качественные и свежие фрукты должны быть доступны каждому. Наша миссия - привозить лучшие фрукты со всего мира прямо к вашему столу.</p>
+    <p id="stafs">Мы - команда энтузиастов, которые верят, что качественные и свежие фрукты должны быть доступны каждому. Наша миссия - привозить лучшие фрукты со всего мира прямо к вашему столу.</p>
     @@include('../components/_polosa.html', {
 
     })
+    <style>
+        #stafs {
+        body.light-theme & {
+            color: var(--dark);
+        }
+        body.dark-theme & {
+            color: var(--light);
+        }
+        }
+    </style>
     <div>
         <div class="staff-grid">
             @@include('../components/_staf.html', {
