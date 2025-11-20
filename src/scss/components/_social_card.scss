@@ -1,23 +1,37 @@
-
-
-.staff-name {
+.social-label {
   text-decoration: none;
+  font-size: 12px;
+  text-align: center;
 }
-.staff-card {
+
+.social-link {
   text-decoration: none;
   max-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
-.staff-image2 {
+
+.social-link:hover {
+  transform: translateY(-2px);
+}
+
+.social-icon {
   width: 50px;
   height: 50px;
   margin: 0 auto 10px;
   border-radius: 50%;
-
   transition: all 0.3s ease;
+  overflow: hidden;
 }
-.staff-image2 img {
+
+.social-icon:hover {
+  transform: scale(1.05);
+}
+
+.social-icon img {
   width: 50px;
   height: 50px;
   object-fit: cover;
-
 }
