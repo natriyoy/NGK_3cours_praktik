@@ -54,6 +54,10 @@ body {
   margin-bottom: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  @media (max-width: 767px) {
+    padding: 15px;
+
+  }
 }
 .section {
   margin-top: 40px;
@@ -61,6 +65,7 @@ body {
   p {
     color: var(--light);
     font-size: 20px;
+
     @media (max-width: 1279px){
       font-size: 17px;
       color: var(--dark);
@@ -75,6 +80,10 @@ body {
   body.dark-theme-theme & {
     color: var(--light);
   }
+}
+.sta3 {
+    color: var(--accent);
+
 }
 .section h2 {
   font-size: 48px;
@@ -116,30 +125,28 @@ body.dark-theme {
 
 .block-korzina-text {
   font-size: 2.5em;
-  color: var(--dark-green);
+  color: var(--accent);
 
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
 .block-korzina-2 {
  display: flex;
   gap: 30px;
-
   width: 100%;
   margin: 0 auto;
-  @media (max-width: 1279px){
+  @media (max-width: 767px){
     flex-wrap: wrap;
   }
 }
-
-/* Большая корзина с градиентом */
 .block-korzina-2-1 {
-
   text-align: center;
-  width: 100%;
+  width: 80%;
+  @media (max-width: 767px) {
+    width: 100%;
 
-
+  }
 }
 
 .block-korzina-2-1-img {
@@ -150,23 +157,45 @@ body.dark-theme {
 
 .block-korzina-2-1-text-1 {
   font-size: 1.8em;
-  color: var(--accent-green);
   margin-bottom: 15px;
   font-weight: 600;
+  body.light-theme & {
+    color: #888888;
+  }
+  body.dark-theme & {
+    color: var(--light);
+  }
 }
 
 .block-korzina-2-1-text-2 {
   font-size: 1.1em;
   color: var(--light);
   opacity: 0.8;
+
+  text-align: center;
+
+  body.light-theme & {
+    color: #888888FF;
+  }
+  body.dark-theme-theme & {
+    color: var(--light);
+  }
 }
 
 /* Маленькое окошечко с информацией */
 .block-korzina-2-2 {
   min-width: 250px;
-  max-width: 300px;
-  width: 100%;
+  width: 20%;
+  body.light-theme & {
+    color: #888888;
+  }
+  body.dark-theme & {
+    color: var(--light);
+  }
+  @media (max-width: 767px) {
+    width: 100%;
 
+  }
 }
 
 .order-title {
@@ -253,5 +282,7 @@ body.dark-theme {
 body {
   margin: 20px 20px 10px 20px;
 
+
 }
 }
+

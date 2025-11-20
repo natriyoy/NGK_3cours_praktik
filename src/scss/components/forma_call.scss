@@ -1,4 +1,6 @@
-/* Стили для формы обратной связи */
+
+
+
 .contact-form-container {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -12,7 +14,7 @@
 .form-title {
   font-size: 2em;
   margin-bottom: 30px;
-  color: var(--accent-green);
+  color: var(--accent);
 }
 
 .contact-form {
@@ -29,7 +31,9 @@
 .form-label {
   margin-bottom: 10px;
   font-weight: 500;
-  color: var(--light-text);
+
+
+
 }
 
 .form-input, .form-textarea {
@@ -135,7 +139,7 @@ body.light-theme .form-textarea:focus {
 .contact-info h2 {
   font-size: 2em;
   margin-bottom: 30px;
-  color: var(--accent-green);
+  color: var(--accent);
 }
 
 
@@ -151,159 +155,168 @@ body.light-theme .form-textarea:focus {
   flex-shrink: 0;
 }
 
-.contact-text h3 {
-  margin-bottom: 8px;
-  color: var(--accent-green);
-  font-size: 1.2em;
+.contact-text {
+  h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.2em;
+    body.light-theme & {
+      color: var(--dark);
+    }
+    body.dark-theme-theme & {
+      color: var(--light);
+    }
+  }
+  p {
+
+     opacity: 0.8;
+     line-height: 1.5;
+    body.light-theme & {
+      color: var(--dark);
+    }
+    body.dark-theme-theme & {
+      color: var(--light);
+    }
+   }
 }
 
-.contact-text p {
-  opacity: 0.8;
-  line-height: 1.5;
+
+.contact-text {
+
 }
 
-/* Стили для светлой темы */
-body.light-theme .contact-info {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000000;
-}
 
-body.light-theme .contact-text p {
-  color: #000000;
-  opacity: 0.8;
-}
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .contact-info {
+      padding: 30px 20px;
+    }
 
-/* Адаптивность */
-@media (max-width: 768px) {
+    .contact-info h2 {
+      font-size: 1.7em;
+    }
+
+    .contact-item {
+      gap: 15px;
+    }
+
+    .contact-icon {
+      font-size: 1.5em;
+      width: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-info {
+      padding: 25px 15px;
+    }
+
+    .contact-info h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .contact-icon {
+      margin: 0 auto;
+    }
+  }
+  /* Стили для контейнера с двумя блоками */
+  .container1 {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+
+  .contact-form-container,
   .contact-info {
-    padding: 30px 20px;
+    flex: 1;
+    min-height: 600px;
   }
 
-  .contact-info h2 {
-    font-size: 1.7em;
-  }
-
-  .contact-item {
-    gap: 15px;
-  }
-
-  .contact-icon {
-    font-size: 1.5em;
-    width: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-info {
-    padding: 25px 15px;
-  }
-
-  .contact-info h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-
-  .contact-item {
+  .contact-details {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .contact-icon {
-    margin: 0 auto;
-  }
-}
-/* Стили для контейнера с двумя блоками */
-.container1 {
-  display: flex;
-  gap: 40px;
-  width: 100%;
-  flex-wrap: wrap;
-
-}
-
-.contact-form-container,
-.contact-info {
-  flex: 1;
-  min-height: 600px;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.features1 {
-  color: var(--light);
-  margin-bottom: 40px;
-  justify-content: center;
-  display: flex;
-
-  gap: 30px;
-
-
-}
-
-.feature3 {
-  margin-top: 10px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  font-weight: bold;
-  background: none;
-  padding: 15px 25px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  body.light-theme & {
-
-  }
-}
-
-body.light-theme .feature3 {
-
-  color: var(--dark);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.feature3:hover {
-  background: rgba(255, 225, 53, 0.25);
-  border-color: #FFE135;
-  transform: translateY(-3px);
-}
-
-.feature-icon3 {
-  font-size: 1.5em;
-}
-@media (max-width: 1279px) {
-  .features1 {
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 35px;
+
   }
 
-}
-
-/* Адаптивность для планшетов */
-@media (max-width: 768px) {
   .features1 {
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 35px;
+    color: var(--light);
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+
+    gap: 30px;
+
+
   }
 
   .feature3 {
-    padding: 14px 22px;
-    border-radius: 18px;
-    gap: 10px;
+    margin-top: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    background: none;
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    body.light-theme & {
+
+    }
+  }
+
+  body.light-theme .feature3 {
+
+    color: var(--dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature3:hover {
+    background: rgba(255, 225, 53, 0.25);
+    border-color: #FFE135;
+    transform: translateY(-3px);
   }
 
   .feature-icon3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
-}
+
+  @media (max-width: 1060px) {
+    .features1 {
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 35px;
+
+    }
+
+    .feature3 {
+      padding: 14px 22px;
+      border-radius: 18px;
+      gap: 10px;
+
+    }
+
+    .feature-icon3 {
+      font-size: 1em;
+    }
+
+  }
+
+  @media (max-width: 850px) {
+
+  }
+
