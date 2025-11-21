@@ -5,6 +5,7 @@
   padding: 30px;
   width: 100%;
   height: auto;
+  max-width: 300px;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
@@ -59,7 +60,8 @@
 }
 
 .staff-grid {
-  display: flex;
+
+
   gap: 30px;
   width: 100%;
   margin-top: 20px;
