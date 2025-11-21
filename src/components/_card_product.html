@@ -1,32 +1,35 @@
 <div class="product-card">
-    <div  class="product-image">
-        <img  src="@@img" alt="@@alt">
+    <div class="product-card__image">
+        <img src="@@img" alt="@@alt" loading="lazy">
     </div>
-    <div class="product-name">@@name</div>
-    <div class="product-description">@@description</div>
-    @@include('../components/_polosa.html', {
 
-    })
-    <div class="product-specs">
-        <div class="dotted-line">
-            <span class="label">Страна</span>
-            <span class="dots"></span>
-            <span class="value">@@country</span>
+    <h3 class="product-card__name">@@name</h3>
+
+    <p class="product-card__descriptions">@@description</p>
+
+    @@include('../components/_polosa.html')
+
+    <div class="product-card__specs">
+        <div class="product-card__spec">
+            <span class="product-card__label">Страна</span>
+            <span class="product-card__dots"></span>
+            <span class="product-card__value">@@country</span>
         </div>
-        <div class="dotted-line">
-            <span class="label">Цена</span>
-            <span class="dots"></span>
-            <span class="value">@@price</span>
+        <div class="product-card__spec">
+            <span class="product-card__label">Цена</span>
+            <span class="product-card__dots"></span>
+            <span class="product-card__value">@@price</span>
         </div>
-        <div class="dotted-line">
-            <span class="label">Средний вес плода</span>
-            <span class="dots"></span>
-            <span class="value">@@weight</span>
+        <div class="product-card__spec">
+            <span class="product-card__label">Средний вес плода</span>
+            <span class="product-card__dots"></span>
+            <span class="product-card__value">@@weight</span>
         </div>
     </div>
-    <div class="product-buttons">
+
+    <div class="product-card__buttons">
         @@include('../components/_button.html', {
-        "name": "В КОРЗИНУ",
+        "name": "В КОРЗИНУ"
         })
-</div>
+    </div>
 </div>
