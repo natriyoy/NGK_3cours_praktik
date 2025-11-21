@@ -1,39 +1,39 @@
 <section id="home" class="promo-banner glass">
-  <div class="promo-banner2">
-    <h1 class="title">Скоро открытие<br> <span class="highlight">У нас не только бананы!</span></h1>
-
-    <p class="description">Первым 100 клиентам - <span class="highlight" style="white-space: nowrap;">скидка&nbsp;30%</span> на первую покупку! Оставьте email и мы сообщим вам об открытии.</p>
-
-
-
-    <div class="features">
-      <div class="feature2">
-      <div class="feature featurer">
-        <div class="feature-icon">🚚</div>
-        <span>Бесплатная доставка</span>
+  <div class="promo-banner__container">
+    <div class="promo-banner__content">
+      <div class="promo-banner__header">
+        <h1 class="promo-banner__title">Скоро открытие<br> <span class="promo-banner__highlight">У нас не только бананы!</span></h1>
+        <p class="promo-banner__description">Первым 100 клиентам - <span class="promo-banner__highlight" style="white-space: nowrap;">скидка&nbsp;30%</span> на первую покупку! Оставьте email и мы сообщим вам об открытии.</p>
       </div>
-      <div class="feature featurer">
-        <div class="feature-icon">⭐</div>
-        <span>Гарантия свежести</span>
+
+      <div class="promo-banner__features">
+        <div class="promo-banner__features-grid">
+          <div class="promo-banner__feature">
+            <div class="promo-banner__feature-icon">🚚</div>
+            <span>Бесплатная доставка</span>
+          </div>
+          <div class="promo-banner__feature">
+            <div class="promo-banner__feature-icon">⭐</div>
+            <span>Гарантия свежести</span>
+          </div>
+          <div class="promo-banner__feature">
+            <div class="promo-banner__feature-icon">🎁</div>
+            <span>Подарок к заказу</span>
+          </div>
+        </div>
       </div>
+
+      <form class="promo-banner__email-form">
+        <input type="email" class="promo-banner__email-input" placeholder="Ваш email" required>
+        <div class="promo-banner__email-button">
+          @@include('../components/_button.html', {
+          "name": "Оповестить",
+          })
+        </div>
+      </form>
     </div>
-      <div class="feature">
-        <div class="feature-icon">🎁</div>
-        <span>Подарок к заказу</span>
-      </div>
-    </div>
-
-    <form class="email-form">
-      <input type="email" class="email-input" placeholder="Ваш email" required>
-        <div class="email-button">
-      @@include('../components/_button.html', {
-            "name": "Оповестить",
-            })</div>
-    </form>
   </div>
-  <div class="hero-image">
-    <img class="hero-image" src="./assets/images/hro-fotо.webp" alt="hero-banner">
-
-
+  <div class="promo-banner__image">
+    <img src="./assets/images/hro-fotо.webp" alt="hero-banner">
   </div>
 </section>

@@ -27,8 +27,8 @@
 </div>
 <section id="catalog" class="section glass">
     <h2 >Наш каталог</h2><br>
-    <div class="products-grid">
-
+    <div class="products-grid2">
+        <div class="products-grid">
         @@include('../components/_card_product.html', {
         "img": "./assets/images/tamarilo.webp",
         "alt": "Тамарило",
@@ -47,8 +47,9 @@
         "country": "Тайланд",
         "price": "690 ₽",
         "weight": "100-200 гр",
-        })
+        })</div>
 
+<div class="products-grid">
 
         @@include('../components/_card_product.html', {
         "img": "./assets/images/longan.webp",
@@ -69,7 +70,7 @@
         "price": "255 ₽",
         "weight": "50-100 гр",
         })
-
+    </div>
 
     </div>
 </section>

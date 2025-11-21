@@ -2,9 +2,24 @@
 .products-grid {
   display: flex;
   gap: 30px;
+  margin-bottom: 30px;
 
   @media (max-width: 1450px) {
+
+    justify-content: center;
+  }
+  @media (max-width: 767px) {
     flex-wrap: wrap;
+  }
+}
+
+
+.products-grid2 {
+
+  gap: 30px;
+
+  @media (min-width: 1550px) {
+    display: flex;
     justify-content: center;
   }
   @media (max-width: 767px) {
@@ -16,10 +31,12 @@
   background: rgba(105, 105, 105, 0.25);
   border-radius: 20px;
   padding: 40px;
-  max-width: 500px;
+  width: 100%; /* Занимает всю ячейку сетки */
+  min-height: 420px; /* 👈 Ключевое: фиксируем минимальную высоту */
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 
 .product-card:hover {
