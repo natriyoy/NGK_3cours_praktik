@@ -98,9 +98,9 @@ flex-wrap: wrap;
 
   body.light-theme & {
     color: #222222;
-    background: #ffffff;
+    background: none;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
 
     &:hover {
       background: rgba(212, 175, 55, 0.1);
@@ -139,22 +139,19 @@ flex-wrap: wrap;
   color: #8E8E8E;
   font-size: 1rem;
   transition: all 0.3s ease;
-
   body.light-theme & {
-    background: rgba(255, 255, 255, 0.9);
+    background: none;
     border: 1px solid #cccccc;
     color: #333333;
-
     &::placeholder {
       color: #666666;
     }
-
     &:hover,
     &:focus {
       color: #d4af37;
       outline: none;
       border-color: #d4af37;
-      background: #ffffff;
+      background: none;
       box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
     }
   }
@@ -274,8 +271,9 @@ flex-wrap: wrap;
   }
 
   .feature2 {
-    display: flex;
-    gap: 5px;
+    gap: 0;
+    display: grid;
+    flex-wrap: wrap;
   }
 
   .feature {

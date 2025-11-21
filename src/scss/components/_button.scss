@@ -9,7 +9,7 @@ width: 100%;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-
+  &:hover,
   &:hover {
     transform: translateY(-1px);
     background: var(--accent);
