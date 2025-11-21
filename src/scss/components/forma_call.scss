@@ -40,7 +40,7 @@
   padding: 18px 25px;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.05);
+  background: none;
   color: var(--light-text);
   font-size: 1em;
   font-family: inherit;
@@ -62,8 +62,6 @@
   resize: vertical;
 }
 
-
-/* Стили для светлой темы */
 body.light-theme .contact-form-container {
   background: rgba(255, 255, 255, 0.8);
   color: #000000;
@@ -75,7 +73,7 @@ body.light-theme .form-label {
 
 body.light-theme .form-input,
 body.light-theme .form-textarea {
-  background: rgba(0, 0, 0, 0.05);
+  background: none;
   border-color: rgba(0, 0, 0, 0.1);
   color: #000000;
 }
@@ -91,7 +89,7 @@ body.light-theme .form-textarea:focus {
   background: rgba(0, 0, 0, 0.08);
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
   .contact-form-container {
     padding: 30px 20px;
@@ -125,7 +123,7 @@ body.light-theme .form-textarea:focus {
     gap: 20px;
   }
 }
-/* Стили для блока контактов */
+
 .contact-info {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -186,7 +184,6 @@ body.light-theme .form-textarea:focus {
 }
 
 
-  /* Адаптивность */
   @media (max-width: 768px) {
     .contact-info {
       padding: 30px 20px;
@@ -226,7 +223,7 @@ body.light-theme .form-textarea:focus {
       margin: 0 auto;
     }
   }
-  /* Стили для контейнера с двумя блоками */
+
   .container1 {
     display: flex;
     gap: 40px;
@@ -307,6 +304,7 @@ body.light-theme .form-textarea:focus {
       padding: 14px 22px;
       border-radius: 18px;
       gap: 10px;
+      flex: 1 1 250px;
 
     }
 
@@ -315,8 +313,23 @@ body.light-theme .form-textarea:focus {
     }
 
   }
+  @media (max-width: 767px) {
+    .features1 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+    }
 
-  @media (max-width: 850px) {
+    .feature3 {
+      flex: none;
+      padding: 16px;
+      justify-content: flex-start;
+      text-align: left;
+    }
 
+    .feature-icon3 {
+      font-size: 1.4em;
+    }
   }
+
 

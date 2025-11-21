@@ -28,13 +28,13 @@
 @use 'info';
 
 :root {
-  --dark-bg: #0F0F0F;
+  --dark: #0F0F0F;
   --dark-gray: #202020;
   --accent:  #e8c841;
   --dark-green: rgba(255, 225, 53, 0.4);
   --light-glass:  #EDEDED;
   --light: #F8F8F8;
-  --dark: #2A2A2A;
+
 }
 body {
   font-family: Arial;
@@ -61,7 +61,7 @@ body {
 }
 .section {
   margin-top: 40px;
-  padding: 10px 40px 10px 40px;
+
   p {
     color: var(--light);
     font-size: 20px;
@@ -172,7 +172,7 @@ body.dark-theme {
   margin-bottom: 15px;
   font-weight: 600;
   body.light-theme & {
-    color: #888888;
+    color: var(--dark);
   }
   body.dark-theme & {
     color: var(--light);
@@ -194,12 +194,12 @@ body.dark-theme {
   }
 }
 
-/* Маленькое окошечко с информацией */
+
 .block-korzina-2-2 {
   min-width: 250px;
   width: 20%;
   body.light-theme & {
-    color: #888888;
+    color: var(--dark);
   }
   body.dark-theme & {
     color: var(--light);
@@ -233,63 +233,6 @@ body.dark-theme {
   margin-top: 10px;
 }
 
-/* Адаптивность */
-//@media (max-width: 968px) {
-//  .block-korzina-2 {
-//    grid-template-columns: 1fr;
-//    gap: 20px;
-//  }
-//
-//  .block-korzina-2-1 {
-//    padding: 40px 20px;
-//    min-height: 300px;
-//  }
-//
-//  .block-korzina-2-1-img {
-//    width: 120px;
-//    height: 120px;
-//  }
-//
-//  .block-korzina-2-1-text-1 {
-//    font-size: 1.5em;
-//  }
-//}
-//
-//@media (max-width: 480px) {
-//  .block-korzina {
-//    padding: 20px 15px;
-//  }
-//
-//  .block-korzina-text {
-//    font-size: 2em;
-//  }
-//
-//  .block-korzina-2-1 {
-//    padding: 30px 15px;
-//  }
-//
-//  .block-korzina-2-2 {
-//    padding: 20px 15px;
-//  }
-//}
-// Tablet: 768–1279px
-//@media (max-width: 1279px) {
-//body {
-//  margin: 20px 20px 10px 20px;
-//  background-color: red;
-//}
-//}
-//
-//
-//// Mobile: ≤767px
-//@media (max-width: 767px) {
-//
-//}
-// Медиа-запросы внутри body
-.products-grid2 {
-
-
-}
 
 @media (max-width: 1279px){
 body {

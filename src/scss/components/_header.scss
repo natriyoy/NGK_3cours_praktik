@@ -17,7 +17,7 @@ header {
       }
 
 
-    // Десктопное меню
+
 
     .nav-menu.desktop-menu {
 
@@ -32,6 +32,7 @@ header {
         }
       .nav-menu-cl {
         padding: 10px 20px;
+
         text-decoration: none;
         color: var(--light);
         font-weight: bold;
@@ -47,7 +48,7 @@ header {
         }
       }
     }
-    // Бургер-иконка
+
     .burger-icon {
       display: none;
       flex-direction: column;
@@ -72,7 +73,7 @@ header {
       }
     }
   }
-  // Модальное окно бургер-меню
+  // Модалка
   .burger-modal {
     display: none;
     position: fixed;
@@ -141,23 +142,7 @@ header {
   gap: 20px;
   align-content: center;
 }
-//// 768–1279px
-//@media (max-width: 1279px) {
-//      .nav-menu-cl {
-//        padding: 10px 20px;
-//        font-size: 0.9em;
-//      }
-//    }
-//
-//
-//// ≤767px
-//@media (max-width: 767px) {
-//
-//      .nav-menu.desktop-menu {
-//        display: none;
-//      }
-//      // Показываем бургер
-//      .burger-icon {
-//        display: flex;
-//      }
-//    }
+.lig-dark {
+  cursor: pointer;
+
+}
